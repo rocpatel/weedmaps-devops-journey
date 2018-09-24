@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style type="text/css">
+    @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+    @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+    @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+    body {
+      font-family: 'Proxima Nova';
+      color: white;
+    }
+
+    h1,
+    h2,
+    h3 {
+      color: #00cdbe;
+      font-family: 'Proxima Nova';
+      font-weight: normal;
+    }
+
+    .remark-code,
+    .remark-inline-code {
+      font-family: 'Ubuntu Mono';
+    }
+
+    li {
+      font-size: xx-large 
+    }
+
+    p img {
+      width: 90%
+    }
+
+    .image-50 img {
+      width: 50%;
+    }
+
+    .image-75 img {
+      width: 75%
+    }
+
+    .image-avatar img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center right;
+    }
+
+    .manual ul {
+      text-align: right;
+      list-style-position: inside;
+    }
+
+    .footnote img {
+      width: 20%
+    }
+
+    .footer { position: absolute; bottom: 12px; left: 20px }
+    .footer span { height: 30px; padding-left: 20px; font-size: small; text-align: top;}
+  </style>
+</head>
+
+<body>
+  <textarea id="source">
+layout: true
+name: background
+background-color: black
+
+---
+template: background
+background-image: url(images/EvolutionTitle.png)
+background-size: contain
+class: bottom
+
+## .center[Evolution of Infrastructure as Code]
+
+### .center[A Weedmaps DevOps Journey]
+
+???
+
+Paul Hinze - Applying Graph Theory to Infrastructure as Code
+
+---
+template: background
+background-image: url(images/wm-leaves-dark.jpg)
+
+# Who Am I? .image-avatar[![animal](images/animal_avatar.jpeg)]
+
+* Rakesh Patel
+* Senior Systems Engineer @ Weedmaps
+* 20 year career in the internet
+  * GeoCities/Yahoo
+  * MP3.com/Universal Music Group
+  * Napster/BestBuy
+* Covered every aspect (data engineering, backend systems, infrastructure, recommendation systems)
+* perl -> java -> ruby -> javascript/node -> golang
+
+---
+template: background
+background-image: url(images/EvolutionTitle2.png)
+background-size: contain
+
+---
+
+template: background
+background-image: url(images/ManualEvolution.png)
+background-size: contain
+class: manual 
+
+# .center[Manual]
+
+---
+
+template: background
+background-image: url(images/BasicAutomationEvolution.png)
+background-size: contain
+
+# .center[Basic Automation]
+
+---
+
+template: background
+background-image: url(images/MachineVirtualizationEvolution.png)
+background-size: contain
+
+# .center[Machine Virtualization]
+
+---
+
+template: background
+background-image: url(images/CommoditizationOfInfrastructure.png)
+background-size: contain
+
+# .center[Commoditization of Infrastructure]
+
+---
+
+template: background
+background-image: url(images/SimpleWebArchitecture.png)
+background-size: contain
+class: middle, center
+
+???
+
+capabilities complexity
+basic web arc
+the cloud is not reliable
+
+---
+
+template: background
+background-image: url(images/LegacyOps.png)
+background-size: contain
+class: bottom
+
+# .left[Legacy Ops]
+
+???
+
+Ansible - yaml driven configuration
+Outsourced Ops - when you outsource, lessons learned aren't retained
+young company
+
+---
+
+template: background
+background-image: url(images/BlueGreenDeploy.png)
+background-size: contain
+class: center
+
+# Blue Green Deploys
+
+???
+
+update ELB's
+
+---
+
+template: background
+background-image: url(images/AMIOhMy.png)
+background-size: contain
+
+# AMI's, oh my!
+
+???
+
+nightly build of golden ami (45min)
+build new ami from golden ami, rebuild
+what happens if the build fails at the 45th min
+now multiply that by a factor of 10
+
+fledgling industry, fledgling company, still trying to understand
+
+---
+
+template: background
+background-image: url(images/WheresTheTruth.png)
+background-size: contain
+
+# Where's The Truth?
+
+???
+
+Documentation?
+Cost Analysis?
+
+---
+
+template: background
+background-image: url(images/wm-leaves-dark.jpg)
+
+# .center[So What Do We Want]
+
+* Infrastructure is version controlled 
+
+--
+
+* Infrastructure is repeatable
+
+--
+
+* Provide fast delivery of software 
+
+---
+template: background
+background-image: url(images/GitOpsV1.png)
+background-size: contain
+class: bottom, left
+
+## Weedmaps GitOps v0.1
+
+---
+
+template: background
+background-image: url(images/DataCenterAsCompute.png)
+background-size: contain
+
+# Datacenter as Compute
+
+---
+
+template: background
+background-image: url(images/SimpleWebArchitectureV2.png)
+background-size: contain
+
+---
+
+template: background
+background-image: url(images/FasterDeployments.png)
+background-size: contain
+
+---
+
+template: background
+background-image: url(images/GitOpsV2.png)
+background-size: contain
+
+---
+
+template: background
+background-image: url(images/wm-leaves-dark.jpg)
+
+# Lessons Learned
+
+* adoption
+* don't have to get it right the first time
+* culture change
+* may want to make the instance fail
+* assume the network will not work
+* ensure tooling, there's no one golden tool
+* chatops
+* capabilities and complexity
+* if there's an AWS service for it, use it
+
+---
+
+template: background
+background-image: url(images/wm-leaves-dark.jpg)
+
+# References
+
+* Paul Hinze - Applying Graph Theory To Terraform [https://www.youtube.com/watch?v=Ce3RNfRbdZ0](https://www.youtube.com/watch?v=Ce3RNfRbdZ0)
+* DevOps KungFu - [https://github.com/chef/devops-kungfu](https://github.com/chef/devops-kungfu)
+* Refspectacular - [https://github.com/JNKRMN/RefSpectacular](https://github.com/JNKRMN/RefSpectacular)
+* And how you connect thru the interwebs
+    * @rocpatel
+    * github.com/rocpatel
+
+
+---
+
+template: background
+background-image: url(images/KungFuOps.png)
+background-size: contain
+
+
+???
+
+
+
+
+    </textarea>
+  <script src="https://remarkjs.com/downloads/remark-latest.min.js">
+  </script>
+  <script>
+    var slideshow = remark.create();
+  </script>
+</body>
+
+</html>
