@@ -33,25 +33,12 @@
       width: 90%
     }
 
-    .image-50 img {
-      width: 50%;
-    }
-
-    .image-75 img {
-      width: 75%
-    }
-
     .image-avatar img {
       width: 150px;
       height: 150px;
       border-radius: 50%;
       object-fit: cover;
       object-position: center right;
-    }
-
-    .manual ul {
-      text-align: right;
-      list-style-position: inside;
     }
 
     .footnote img {
@@ -81,8 +68,6 @@ class: bottom
 
 ???
 
-Paul Hinze - Applying Graph Theory to Infrastructure as Code
-
 ---
 template: background
 background-image: url(images/wm-leaves-dark.jpg)
@@ -91,26 +76,36 @@ background-image: url(images/wm-leaves-dark.jpg)
 
 * Rakesh Patel
 * Senior Systems Engineer @ Weedmaps
-* 20 year career in the internet
-  * GeoCities/Yahoo
-  * MP3.com/Universal Music Group
-  * Napster/BestBuy
-* Covered every aspect (data engineering, backend systems, infrastructure, recommendation systems)
-* perl -> java -> ruby -> javascript/node -> golang
+* 20 year career
+* data engineering, backend systems, frontend, infrastructure
+* golang
 
 ---
 template: background
 background-image: url(images/EvolutionTitle2.png)
 background-size: contain
 
+???
+
+Paul Hinze - Applying Graph Theory to Infrastructure as Code
+DevOps Journeys
+  - DevOps feedback loops
+  - Journeys examine those loops
+  - little hippie like that
+
 ---
 
 template: background
 background-image: url(images/ManualEvolution.png)
 background-size: contain
-class: manual 
 
 # .center[Manual]
+
+???
+
+Rack & Stack
+golden images
+ssh administration
 
 ---
 
@@ -120,6 +115,13 @@ background-size: contain
 
 # .center[Basic Automation]
 
+???
+
+distributed rsync
+hosted package repos
+agents
+get nostalgic
+
 ---
 
 template: background
@@ -128,6 +130,12 @@ background-size: contain
 
 # .center[Machine Virtualization]
 
+???
+
+organizations build test/dev infrastructure
+physical hardware represented by software (configuration)
+beginnings of automated infrastructure
+
 ---
 
 template: background
@@ -135,6 +143,12 @@ background-image: url(images/CommoditizationOfInfrastructure.png)
 background-size: contain
 
 # .center[Commoditization of Infrastructure]
+
+???
+
+Large orgs got good at this, started representing as API's
+start out writing custom bash
+Terraform - represent as config, state stored as json
 
 ---
 
@@ -225,12 +239,26 @@ background-image: url(images/wm-leaves-dark.jpg)
 * Provide fast delivery of software 
 
 ---
+
+template: background
+background-image: url(images/Terraform.png)
+background-size: contain
+
+---
+
 template: background
 background-image: url(images/GitOpsV1.png)
 background-size: contain
 class: bottom, left
 
 ## Weedmaps GitOps v0.1
+
+???
+
+Problems
+  - terraform code base started getting Large
+  - jenkins tough to work with
+  - chefdk environment sensitive
 
 ---
 
@@ -240,11 +268,22 @@ background-size: contain
 
 # Datacenter as Compute
 
+???
+
+chroot became powerful
+orchestration/scheduling
+
 ---
 
 template: background
 background-image: url(images/SimpleWebArchitectureV2.png)
 background-size: contain
+
+???
+
+Not very different
+Software not deployed at the instance level
+Groups of compute and memory units
 
 ---
 
@@ -252,11 +291,26 @@ template: background
 background-image: url(images/FasterDeployments.png)
 background-size: contain
 
+???
+image builds are fast (don't have to actually startup a virt)
+container orchestration
+scheduler starts containers and removes the old ones
+
+app startup times must be fast
+setup and configuration run as separate tasks
+minimal coordination
+
 ---
 
 template: background
 background-image: url(images/GitOpsV2.png)
 background-size: contain
+
+???
+
+smaller state files
+use refspec flow for terraform
+chef still the ugly stepchild
 
 ---
 
@@ -274,6 +328,12 @@ background-image: url(images/wm-leaves-dark.jpg)
 * chatops
 * capabilities and complexity
 * if there's an AWS service for it, use it
+
+???
+
+perspectives change
+how you build your app is looked at differently
+toil of using new tech and complexity but the capabilities gained aren't noticed
 
 ---
 
@@ -299,6 +359,7 @@ background-size: contain
 
 ???
 
+journeys r a way of practicing while providing value
 
 
 
